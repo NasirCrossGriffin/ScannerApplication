@@ -21,8 +21,8 @@ const ChecklistRouter = require('./routes/ChecklistRoutes');
 const ScannerRouter = require('./routes/ScannerRoutes');
 
 
-app.use('/api/checklist', ChecklistRouter);
-app.use('/api/scanner', ScannerRouter);
+app.use(`${process.env.BASE_URL}/api/checklist`, ChecklistRouter);
+app.use(`${process.env.BASE_URL}/api/scanner`, ScannerRouter);
 
 
 app.use(express.static(path.join(__dirname, "build")));
